@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Data_Binding.FormPage"
+             Title="Formulario">
+
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Nombre" FontSize="Medium" />
+        <Entry Placeholder="Ingrese su nombre" x:Name="NombreEntry"/>
+
+        <Label Text="Apellido" FontSize="Medium" />
+        <Entry Placeholder="Ingrese su apellido" x:Name="ApellidoEntry"/>
+
+        <Label Text="Sexo" FontSize="Medium" />
+        <Picker x:Name="SexoPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>H</x:String>
+                    <x:String>M</x:String>
+                    <x:String>O</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Fecha de Nacimiento" FontSize="Medium" />
+        <DatePicker x:Name="FechaNacimientoDatePicker"/>
+
+        <Label Text="ID Rol" FontSize="18" TextColor="#555" />
+        <Entry x:Name="idRol" Placeholder="Ingrese el ID de rol" Keyboard="Numeric" />
+
+        <Button Text="Guardar" Clicked="OnGuardarClicked"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Data_Binding.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Button Text="Ir a FormPage" Clicked="Button_Clicked"/>
+
+            <CollectionView ItemsSource="{Binding Personas}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnSpacing="2" RowSpacing="2" Padding="10" BackgroundColor="LightGray">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="ID" TextColor="White" BackgroundColor="Black" 
+                                   FontSize="Medium" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                            <Label Text="{Binding id}" TextColor="Black" BackgroundColor="White" 
+                                   FontSize="Small" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+
+                            <Label Text="Nombre" TextColor="White" BackgroundColor="Black" 
+                                   FontSize="Medium" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                            <Label Text="{Binding nombre}" TextColor="Black" BackgroundColor="White" 
+                                   FontSize="Small" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+
+                            <Label Text="Apellido" TextColor="White" BackgroundColor="Black" 
+                                   FontSize="Medium" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                            <Label Text="{Binding apellido}" TextColor="Black" BackgroundColor="White" 
+                                   FontSize="Small" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+
+                            <Label Text="Sexo" TextColor="White" BackgroundColor="Black" 
+                                   FontSize="Medium" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="0"/>
+                            <Label Text="{Binding sexo}" TextColor="Black" BackgroundColor="White" 
+                                   FontSize="Small" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="1"/>
+
+                            <Label Text="Fecha de Nacimiento" TextColor="White" BackgroundColor="Black" 
+                                   FontSize="Medium" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="0"/>
+                            <Label Text="{Binding fh_nac}" TextColor="Black" BackgroundColor="White" 
+                                   FontSize="Small" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="1"/>
+
+                            <Label Text="Rol" TextColor="White" BackgroundColor="Black" 
+                                   FontSize="Medium" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="0"/>
+                            <Label Text="{Binding rol}" TextColor="Black" BackgroundColor="White" 
+                                   FontSize="Small" VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
