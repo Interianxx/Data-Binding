@@ -29,5 +29,3 @@ lo que permite actualizar la UI en tiempo real cuando los datos cambian.
 ### Actualizacion de la base de datos
 ![Actualizacion](https://drive.google.com/uc?export=view&id=1TcNuDLns9C3CjyUPoL18-r_VeI8ZHj5a)
 
-## Instrucciones de uso
-Co
